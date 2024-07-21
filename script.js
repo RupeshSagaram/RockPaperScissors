@@ -47,4 +47,6 @@ function getHumanChoice(){
     }   
 }
 
-getHumanChoice();
+/* creating global scope variable to keep track of scores and initializing it with zero*/
+let humanScore = 0;
+let computerScore = 0;
