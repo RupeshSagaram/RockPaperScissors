@@ -50,3 +50,41 @@ function getHumanChoice(){
 /* creating global scope variable to keep track of scores and initializing it with zero*/
 let humanScore = 0;
 let computerScore = 0;
+
+/*
+ writing a logic to play a single round.
+ create a function playRound.
+ it takes two parameters: humanChoice and computerChoice
+ create two variables in global scope called humanSelection and comSection and assign the getHumanChoice function and getComputerChoice function respectively.
+ change human choices and computerChoices to case insensitive by using toLowerCase()
+ in playRound function create a conditional statement between humanchoices and computerchoices.
+ if both are strictly equal then its a draw
+ if they are not equal then write condition explaing game logic
+ increment the human or com variable based on the winner.
+*/
+
+function playRound(humanChoice,computerChoice){
+humanChoice = humanChoice.toLowerCase();
+computerChoice = computerChoice.toLowerCase();
+
+if(humanChoice===computerChoice){
+ console.log('it\'s a draw. no increase in points');
+} 
+else if(humanChoice=='rock' && computerChoice == 'scissors'){
+console.log('you win, rock defeats scissors');
+}
+else if(humanChoice=='scissors' && computerChoice == 'paper'){
+    console.log('you win, scissors defeats paper');   
+}
+else if(humanChoice=='paper' && computerChoice == 'rock'){
+    console.log('you win, paper defats rock');
+}
+else {
+    console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
+}
+}
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerOptions();
+
+playRound(humanChoice,computerChoice);
