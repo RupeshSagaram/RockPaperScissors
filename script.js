@@ -18,4 +18,33 @@ function getComputerOptions(){
  return randomOptions;
 }
 
+/*
 
+create a function called getHumanChoice
+create a variable called choice and assign a prompt asking user for their choice.
+create a conditional if statement to make sure other options entered by user are invalid.
+output the choices in each condition.
+*/
+
+function getHumanChoice(){
+    choice = prompt("choose any one: rock, paper, scissors");
+
+    if(choice == 'rock'){
+       userChoice= 'rock';
+        return userChoice;
+    }
+    else if(choice =='paper'){
+        userChoice= 'paper';
+        return userChoice;
+    }
+    else if(choice == 'scissors'){
+        userChoice= 'scissors';
+        return userChoice;
+    }
+    else{
+        userChoice= 'not valid';
+        return userChoice;
+    }   
+}
+
+getHumanChoice();
