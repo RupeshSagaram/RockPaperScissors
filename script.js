@@ -69,18 +69,23 @@ computerChoice = computerChoice.toLowerCase();
 
 if(humanChoice===computerChoice){
  console.log('it\'s a draw. no increase in points');
+
 } 
 else if(humanChoice=='rock' && computerChoice == 'scissors'){
 console.log('you win, rock defeats scissors');
+humanScore = ++humanScore;
 }
 else if(humanChoice=='scissors' && computerChoice == 'paper'){
-    console.log('you win, scissors defeats paper');   
+    console.log('you win, scissors defeats paper'); 
+    humanScore = ++humanScore;
 }
 else if(humanChoice=='paper' && computerChoice == 'rock'){
     console.log('you win, paper defats rock');
+    humanScore = ++humanScore;
 }
 else {
     console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
+    computerScore = ++computerScore;
 }
 }
 
