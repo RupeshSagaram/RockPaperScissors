@@ -93,7 +93,7 @@ else if(humanChoice=='scissors' && computerChoice == 'paper'){
     return ++humanScore;
 }
 else if(humanChoice=='paper' && computerChoice == 'rock'){
-    console.log('you win, paper defats rock');
+    console.log('you win, paper defeats rock');
     return ++humanScore;
 }
 else {
