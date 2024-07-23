@@ -42,7 +42,7 @@ function getHumanChoice(){
         return userChoice;
     }
     else{
-        userChoice= 'not valid';
+        userChoice= prompt("choose any one: rock, paper, scissors");
         return userChoice;
     }   
 }
