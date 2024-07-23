@@ -108,8 +108,16 @@ let computerChoice = getComputerOptions();
 
 playRound(humanChoice,computerChoice);
 }
+
+if(humanScore>computerScore){
+  console.log('Congratulations!! you won the game!');
+}
+else if(computerScore>humanScore){
+    console.log('Gameover!!! better luck next time! :(')
+}
 console.log(`your score: ${humanScore}`);
 console.log(`computer score: ${computerScore}`);
+
 
 }
 
