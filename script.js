@@ -47,7 +47,23 @@ function getHumanChoice(){
     }   
 }
 
-/* creating global scope variable to keep track of scores and initializing it with zero*/
+
+/*
+creating a function playgame
+move playRound function and score variables inside the playGame function
+there should be 5 rounds.
+create a for loop for variable round, if round is equal to one
+round is less than 6, increatement round.
+*/
+
+function playGame(){
+
+    for(let round = 1; round<6; round++){
+        console.log(`Round: ${round}`);
+        
+    
+
+/* creating variable to keep track of scores and initializing it with zero*/
 let humanScore = 0;
 let computerScore = 0;
 
@@ -73,23 +89,29 @@ if(humanChoice===computerChoice){
 } 
 else if(humanChoice=='rock' && computerChoice == 'scissors'){
 console.log('you win, rock defeats scissors');
-humanScore = ++humanScore;
+return ++humanScore;
 }
 else if(humanChoice=='scissors' && computerChoice == 'paper'){
     console.log('you win, scissors defeats paper'); 
-    humanScore = ++humanScore;
+    return ++humanScore;
 }
 else if(humanChoice=='paper' && computerChoice == 'rock'){
     console.log('you win, paper defats rock');
-    humanScore = ++humanScore;
+    return ++humanScore;
 }
 else {
     console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
-    computerScore = ++computerScore;
+    return ++computerScore;
 }
 }
+
 
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerOptions();
 
 playRound(humanChoice,computerChoice);
+}
+
+}
+
+playGame();
