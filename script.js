@@ -47,6 +47,9 @@ function getHumanChoice(){
     }   
 }
 
+/* creating variable to keep track of scores and initializing it with zero*/
+let humanScore = 0;
+let computerScore = 0;
 
 /*
 creating a function playgame
@@ -59,13 +62,7 @@ round is less than 6, increatement round.
 function playGame(){
 
     for(let round = 1; round<6; round++){
-        console.log(`Round: ${round}`);
-        
-    
 
-/* creating variable to keep track of scores and initializing it with zero*/
-let humanScore = 0;
-let computerScore = 0;
 
 /*
  writing a logic to play a single round.
@@ -104,13 +101,15 @@ else {
     return ++computerScore;
 }
 }
-
+console.log(`Round: ${round}`);
 
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerOptions();
 
 playRound(humanChoice,computerChoice);
 }
+console.log(`your score: ${humanScore}`);
+console.log(`computer score: ${computerScore}`);
 
 }
 
