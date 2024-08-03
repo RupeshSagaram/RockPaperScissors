@@ -10,7 +10,7 @@ function getHumanChoice(){
     choice = prompt("choose any one: rock, paper, scissors");
 
     if(choice == 'rock'){
-       userChoice= 'rock';
+        userChoice= 'rock';
         return userChoice;
     }
     else if(choice =='paper'){
@@ -29,10 +29,6 @@ function getHumanChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
-
-function playGame(){
-
-    for(let round = 1; round<6; round++){
 
 function playRound(humanChoice,computerChoice){
 humanChoice = humanChoice.toLowerCase();
@@ -59,25 +55,13 @@ else {
     return ++computerScore;
 }
 }
-console.log(`Round: ${round}`);
 
 let humanChoice = getHumanChoice();
 let computerChoice = getComputerOptions();
 
 playRound(humanChoice,computerChoice);
-}
 
-if(humanScore>computerScore){
-  console.log('Congratulations!! you won the game!');
-}
-else if(computerScore>humanScore){
-    console.log('Gameover!!! better luck next time! :(')
-}
 
 // the following scores are working only when it is placed outside the loop.
 console.log(`your score: ${humanScore}`);
 console.log(`computer score: ${computerScore}`);
-
-}
-
-playGame();
