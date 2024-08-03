@@ -50,14 +50,25 @@ else {
     return ++computerScore;
 }
 
-console.log(`your score: ${humanScore}`);
-scores.textContent= `your score: ${humanScore}, computer score: ${computerScore}`;
-console.log(`computer score: ${computerScore}`);
+
+if(humanScore >=5){
+    result.textContent= `you won the game, your score : ${humanScore} defeats computer score: ${computerScore}`;
+    humanScore = 0;
+    computerScore = 0;
+} else if(computerScore >=5){
+    result.textContent= `Game Over!!!!!, computer score: ${computerScore}, your score: ${humanScore}`;
+    humanScore = 0;
+    computerScore = 0;
+
+} else{
+    scores.textContent= `your score: ${humanScore}, computer score: ${computerScore}`;
+    playRound;
+}
+
+
 }
 
 
 rockBtn.addEventListener('click',() => playRound('rock'));
 paperBtn.addEventListener('click',() => playRound('paper'));
 scissorsBtn.addEventListener('click',() => playRound('scissors'));
-
-
