@@ -1,3 +1,7 @@
+let rockBtn = document.querySelector('#rock');
+let paperBtn = document.querySelector('#paper');
+let scissorsBtn = document.querySelector('#scissors');
+
 
 let options = ['rock', 'paper', 'scissors'];
 
@@ -5,34 +9,12 @@ function getComputerOptions(){
  let randomOptions = options[(Math.floor(Math.random()*options.length))];
  return randomOptions;
 }
-
-function getHumanChoice(){
-    choice = prompt("choose any one: rock, paper, scissors");
-
-    if(choice == 'rock'){
-        userChoice= 'rock';
-        return userChoice;
-    }
-    else if(choice =='paper'){
-        userChoice= 'paper';
-        return userChoice;
-    }
-    else if(choice == 'scissors'){
-        userChoice= 'scissors';
-        return userChoice;
-    }
-    else{
-        userChoice= prompt("choose any one: rock, paper, scissors");
-        return userChoice;
-    }   
-}
-
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice,computerChoice){
-humanChoice = humanChoice.toLowerCase();
-computerChoice = computerChoice.toLowerCase();
+function playRound(humanChoice){
+
+let computerChoice = getComputerOptions();
 
 if(humanChoice===computerChoice){
  console.log('it\'s a draw. no increase in points');
@@ -56,11 +38,9 @@ else {
 }
 }
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerOptions();
-
-playRound(humanChoice,computerChoice);
-
+rockBtn.addEventListener('click',() => playRound('rock'));
+paperBtn.addEventListener('click',() => playRound('paper'));
+scissorsBtn.addEventListener('click',() => playRound('scissors'));
 
 // the following scores are working only when it is placed outside the loop.
 console.log(`your score: ${humanScore}`);
