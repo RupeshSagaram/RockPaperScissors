@@ -20,32 +20,32 @@ function playRound(humanChoice){
 let computerChoice = getComputerOptions();
 
 if(humanChoice===computerChoice){
- console.log('it\'s a draw. no increase in points');
+ //console.log('it\'s a draw. no increase in points');
  result.textContent= 'it\'s a draw. no increase in points';
  
 
 } 
 else if(humanChoice=='rock' && computerChoice == 'scissors'){
-console.log('you win, rock defeats scissors');
+//console.log('you win, rock defeats scissors');
 result.textContent= 'you win, rock defeats scissors';
 
 return ++humanScore;
 }
 else if(humanChoice=='scissors' && computerChoice == 'paper'){
-    console.log('you win, scissors defeats paper'); 
+    //console.log('you win, scissors defeats paper'); 
     result.textContent= 'you win, scissors defeats paper';
     
     return ++humanScore;
 }
 else if(humanChoice=='paper' && computerChoice == 'rock'){
-    console.log('you win, paper defeats rock');
+    //console.log('you win, paper defeats rock');
     result.textContent= 'you win, paper defeats rock';
     
     return ++humanScore;
 }
 else {
     ++computerScore
-    console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
+    //console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
     result.textContent= `you lose, ${computerChoice} defeats ${humanChoice}`;
     return;
     
