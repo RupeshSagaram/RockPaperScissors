@@ -44,23 +44,25 @@ else if(humanChoice=='paper' && computerChoice == 'rock'){
     return ++humanScore;
 }
 else {
+    ++computerScore
     console.log(`you lose, ${computerChoice} defeats ${humanChoice}`);
     result.textContent= `you lose, ${computerChoice} defeats ${humanChoice}`;
-   
-    return ++computerScore;
+    return;
+    
+    
 }
 
 
-if(humanScore >=5){
+if(humanScore >=5 && humanScore!==computerScore){
     result.textContent= `you won the game, your score : ${humanScore} defeats computer score: ${computerScore}`;
     humanScore = 0;
     computerScore = 0;
-} else if(computerScore >=5){
+} else if(computerScore >=5 && humanScore!==computerScore){
     result.textContent= `Game Over!!!!!, computer score: ${computerScore}, your score: ${humanScore}`;
     humanScore = 0;
     computerScore = 0;
 
-} else{
+}else{
     scores.textContent= `your score: ${humanScore}, computer score: ${computerScore}`;
     playRound;
 }
