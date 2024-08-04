@@ -55,3 +55,16 @@ button{
     font-weight: 600;
 
 }
+
+.resultsDiv{
+    text-align: center;
+}
+
+.result{
+    font-size: 18px;
+    font-weight: 700;
+}
+.score{
+    font-size: 18px;
+    font-weight: 700;
+}

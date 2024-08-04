@@ -74,3 +74,9 @@ if(humanScore >=5 && humanScore!==computerScore){
 rockBtn.addEventListener('click',() => playRound('rock'));
 paperBtn.addEventListener('click',() => playRound('paper'));
 scissorsBtn.addEventListener('click',() => playRound('scissors'));
+
+
+
+
+
+
